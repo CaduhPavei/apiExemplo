@@ -1,4 +1,4 @@
-package com.senac.api.entities;
+package com.senac.api.model;
 
 import jakarta.persistence.*;
 

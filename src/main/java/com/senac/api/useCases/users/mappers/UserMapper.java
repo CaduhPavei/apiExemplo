@@ -1,9 +1,9 @@
-package com.senac.api.useCases.mappers;
+package com.senac.api.useCases.users.mappers;
 
 
-import com.senac.api.entities.User;
-import com.senac.api.useCases.domains.UserRequestDom;
-import com.senac.api.useCases.domains.UserResponseDom;
+import com.senac.api.model.User;
+import com.senac.api.useCases.users.domains.UserRequestDom;
+import com.senac.api.useCases.users.domains.UserResponseDom;
 
 public class UserMapper {
     public static User userRequestDomToUser(UserRequestDom input){

@@ -1,4 +1,4 @@
-package com.senac.api.useCases.domains;
+package com.senac.api.useCases.users.domains;
 
 public class UserRequestDom {
     private String login;
