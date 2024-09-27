@@ -24,7 +24,7 @@ public class TokenService {
             Algorithm algorithm = Algorithm.HMAC256(secret);
 
             String token = JWT.create()
-                    .withIssuer("exemplo-security-api")
+                    .withIssuer("postgres")
                     .withSubject(user.getLogin())
                     .withExpiresAt(this.gerarExpiracaoData())
                     .sign(algorithm);
@@ -39,7 +39,7 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             return JWT.require(algorithm)
-                    .withIssuer("exemplo-security-api")
+                    .withIssuer("postgres")
                     .build()
                     .verify(token)
                     .getSubject();

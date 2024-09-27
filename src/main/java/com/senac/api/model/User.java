@@ -2,7 +2,7 @@ package com.senac.api.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "username")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

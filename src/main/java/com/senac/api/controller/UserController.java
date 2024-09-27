@@ -15,8 +15,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @PostMapping("/register")
 
+    @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserRequestDom user) {
         try {
             return ResponseEntity.ok(userService.createUser(user));
