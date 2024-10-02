@@ -28,7 +28,7 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody UserRequestDom user){
         try{
-            return ResponseEntity.ok(userService.loginUsuario(user));
+            return ResponseEntity.ok(userService.userLogin(user));
         } catch (Exception e){
             return ResponseEntity.badRequest().body("Erro não mapeado: " + e.getMessage());
         }

@@ -30,7 +30,7 @@ public class UserService {
         return UserMapper.userToUserResponseDom(userResult);
     }
 
-    public UserResponseDom loginUsuario(UserRequestDom user) throws Exception {
+    public UserResponseDom userLogin(UserRequestDom user) throws Exception {
         Optional<User> userResult = userRepository.findByLogin(user.getLogin());
 
         if(userResult.isPresent()){
