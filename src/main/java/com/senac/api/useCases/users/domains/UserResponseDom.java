@@ -1,5 +1,9 @@
 package com.senac.api.useCases.users.domains;
 
+import com.senac.api.model.User;
+
+import java.util.List;
+
 public class UserResponseDom {
     private Long id;
     private String login;
@@ -27,5 +31,14 @@ public class UserResponseDom {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public void setUserList(List<User> userList) {
+    }
+
+    public void setUser(User user) {
+    }
+
+    public void setErrorMessage(String user_not_found) {
     }
 }

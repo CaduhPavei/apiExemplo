@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -46,5 +47,31 @@ public class UserService {
             throw new Exception("Senha inválida.");
         }
         throw new Exception("Usuário não encontrado!");
+    }
+
+    public UserResponseDom userFindAll(UserRequestDom user) {
+        List<User> userList = userRepository.findAll();
+        UserResponseDom response = new UserResponseDom();
+        response.setUserList(userList);
+        return response;
+    }
+
+    public UserResponseDom userFindById(UserRequestDom userRequest) {
+        UserResponseDom response = new UserResponseDom();
+
+        try {
+            Long id = userRequest.getId();
+            Optional<User> optionalUser = userRepository.findById(id);
+
+            if (optionalUser.isPresent()) {
+                response.setUser(optionalUser.get());
+            } else {
+                response.setErrorMessage("User not found");
+            }
+        } catch (Exception e) {
+            response.setErrorMessage("Error finding user: " + e.getMessage());
+        }
+
+        return response;
     }
 }
