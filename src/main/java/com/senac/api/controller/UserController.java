@@ -5,6 +5,7 @@ import com.senac.api.useCases.users.domains.UserRequestDom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,5 +34,11 @@ public class UserController {
             return ResponseEntity.badRequest().body("Erro não mapeado: " + e.getMessage());
         }
     }
-}
 
+//    @GetMapping("/findById")
+//    public ResponseEntity<?> findById(RequestBody UserRequestDom user){
+//        try {
+//
+//        }
+//    }
+}
