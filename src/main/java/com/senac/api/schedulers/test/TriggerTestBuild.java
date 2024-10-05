@@ -1,11 +1,11 @@
-//package com.senac.api.schedulers.test;
-//
-//import org.quartz.*;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.stereotype.Service;
-//
+package com.senac.api.schedulers.test;
+
+import org.quartz.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
+
 //@Service
-//public class TriggerTestBuild {
+public class TriggerTestBuild {
 //    @Bean
 //    public JobDetail jobCaldeirao() {
 //        return JobBuilder.newJob(JobCaldeirao.class)
@@ -34,4 +34,4 @@
 //                .withSchedule(CronScheduleBuilder.cronSchedule("0,2,4,6,8,10,12,14,16,18,20 * * ? * * *"))
 //                .build();
 //    }
-//}
+}
